@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('subject');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('role');
+//            $table->string('role');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -35,4 +35,6 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
     }
+
+
 }

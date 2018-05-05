@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -43,30 +44,27 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
-    }
-
-    /**
-     * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
-     * @return \App\Models\User
+     *
      */
-    protected function create(array $data)
+    public function register(RegisterRequest $Request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+//dd($Request->toArray());
+        User::create([
+            'name'     => $Request->name,
+            'email'    => $Request->email,
+//            'password' => $Request->password,
+            'subject'  => $Request->subject,
+            'school'   => $Request->school,
+            'password'=>Hash::make($Request->password),
+
         ]);
+
     }
+//    public function setAttribute($Request)
+//    {
+//        'password'=>Hash::make($Request->password);
+//    }
 }

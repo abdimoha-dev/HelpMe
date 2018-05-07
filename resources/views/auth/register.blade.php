@@ -24,32 +24,6 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="subject" class="col-md-4 col-form-label text-md-right">{{ __('Subject') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="subject" type="text" class="form-control{{ $errors->has('subject') ? ' is-invalid' : '' }}" name="subject" value="{{ old('subject') }}" required autofocus>
-
-                                    @if ($errors->has('subject'))
-                                        <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('subject') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="school" class="col-md-4 col-form-label text-md-right">{{ __('school') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="school" type="text" class="form-control{{ $errors->has('subject') ? ' is-invalid' : '' }}" name="school" value="{{ old('school') }}" required autofocus>
-
-                                    @if ($errors->has('school'))
-                                        <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('school') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
 
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>

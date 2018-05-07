@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => env('support.elimufront.com'),
+        'secret' => env('key-02cdfda265aa374a472a6246791ac03e'),
     ],
 
     'ses' => [

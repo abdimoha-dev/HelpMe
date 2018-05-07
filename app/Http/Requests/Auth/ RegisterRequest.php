@@ -26,8 +26,6 @@ class  RegisterRequest extends FormRequest
         return [
             'name'     => 'required',
             'email'    => 'required',
-            'school'   => 'required',
-            'subject'  => 'required',
             'password' => 'required',
         ];
     }
@@ -37,8 +35,6 @@ class  RegisterRequest extends FormRequest
         return [
             'name.required'    => 'please enter your name',
             'email.required'   => 'please enter your email',
-            'school.required'  => 'please enter your school',
-            'subject.required' => 'please enter your subject',
             'password.required'=>'please enter your password'
 
         ];

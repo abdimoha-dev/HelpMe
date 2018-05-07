@@ -1,7 +1,6 @@
 <?php
 return [
     'users' => [
-        'ROOT'    => 'Root',
         'ADMIN'   => 'Admin',
         'TEACHER' => 'Teacher',
         'STUDENT' => 'Student',
@@ -17,7 +16,6 @@ return [
         'GEOGRAPHY'   => 'Geography',
         'AGRICULTURE' => 'Agriculture',
         'BUSINESS'    => 'Business',
-
     ],
 
 ];

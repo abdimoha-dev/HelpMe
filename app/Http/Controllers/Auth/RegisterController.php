@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Mail\ConfrimEmail;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -42,29 +44,46 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     *
-     *
+     * @param RegisterRequest $Request for a new user
      */
     public function register(RegisterRequest $Request)
     {
-//dd($Request->toArray());
-        User::create([
-            'name'     => $Request->name,
-            'email'    => $Request->email,
-//            'password' => $Request->password,
-            'subject'  => $Request->subject,
-            'school'   => $Request->school,
-            'password'=>Hash::make($Request->password),
+
+        $user = User::create([
+            'name'        => $Request->name,
+            'email'       => $Request->email,
+            'subject'     => $Request->subject,
+            'school'      => $Request->school,
+            'email_token' => str_random(16),
+            'password'    => Hash::make($Request->password),
 
         ]);
+        $this->sendMail($user->email, $user->email_token);
+        return redirect('login')->with('messages');
+
 
     }
-//    public function setAttribute($Request)
-//    {
-//        'password'=>Hash::make($Request->password);
-//    }
+
+    /**
+     * @param sending email and Email token to user
+     * @param $token
+     */
+    public function sendMail($email, $token)
+    {
+        Mail::to($email)->send(new ConfrimEmail($token));
+
+    }
+
+    /*
+     * On clicking email confirmation link sent
+     *
+     */
+    public function clickemaillink($token)
+    {
+        if (User::where('email_token',$token)){
+            User::where('email_token',$token)->update(['email_token'=>NULL]);
+            return redirect('auth.login');
+        }
+    }
+
 }

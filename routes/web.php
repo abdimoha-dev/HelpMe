@@ -4,6 +4,7 @@
 ################AUTH#########################
 #############################################
 Auth::routes();
+Route::get('check/email/confirmation/{token}','Auth\RegisterController@clickemaillink');
 
 ################HOME######################
 Route::get('/','LandingPage\LandingController@home');

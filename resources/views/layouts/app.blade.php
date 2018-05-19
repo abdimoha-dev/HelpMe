@@ -72,15 +72,14 @@
                                 Complete Registration<span class="caret"></span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}">
+                                <a class="dropdown-item" href="{{url('teacher/registration')}}">
                                     {{ __('Tearcher') }}
-                                </a> <a class="dropdown-item" href="{{ route('logout') }}">
+                                    <a href="{{url('teacher/registration')}}"></a>
+                                </a> <a class="dropdown-item" href="{{url('student/registration')}}">
                                     {{ __('Student') }}
+                                    <a href="{{url('student/registration')}}"></a>
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
                             </div>
                         </li>
                     @endguest
@@ -95,3 +94,5 @@
 </div>
 </body>
 </html>
+@stack('footer-scripts')
+

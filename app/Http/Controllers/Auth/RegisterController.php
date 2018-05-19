@@ -78,12 +78,6 @@ class RegisterController extends Controller
      * On clicking email confirmation link sent
      *
      */
-    public function clickemaillink($token)
-    {
-        if (User::where('email_token',$token)){
-            User::where('email_token',$token)->update(['email_token'=>NULL]);
-            return redirect('auth.login');
-        }
-    }
+
 
 }

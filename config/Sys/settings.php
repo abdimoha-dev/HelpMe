@@ -74,5 +74,4 @@ return [
         'MYAMIRA'         => 'Nyamira',
         'NAIROBI'         => 'Nairobi',
     ],
-
 ];

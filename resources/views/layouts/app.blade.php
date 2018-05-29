@@ -67,21 +67,21 @@
                                 </form>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Complete Registration<span class="caret"></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{url('teacher/registration')}}">
-                                    {{ __('Tearcher') }}
-                                    <a href="{{url('teacher/registration')}}"></a>
-                                </a> <a class="dropdown-item" href="{{url('student/registration')}}">
-                                    {{ __('Student') }}
-                                    <a href="{{url('student/registration')}}"></a>
-                                </a>
+                        {{--<li class="nav-item dropdown">--}}
+                            {{--<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
+                                {{--Complete Registration<span class="caret"></span>--}}
+                            {{--</a>--}}
+                            {{--<div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+                                {{--<a class="dropdown-item" href="{{url('teacher/registration')}}">--}}
+                                    {{--{{ __('Tearcher') }}--}}
+                                    {{--<a href="{{url('teacher/registration')}}"></a>--}}
+                                {{--</a> <a class="dropdown-item" href="{{url('student/registration')}}">--}}
+                                    {{--{{ __('Student') }}--}}
+                                    {{--<a href="{{url('student/registration')}}"></a>--}}
+                                {{--</a>--}}
 
-                            </div>
-                        </li>
+                            {{--</div>--}}
+                        {{--</li>--}}
                     @endguest
                 </ul>
             </div>

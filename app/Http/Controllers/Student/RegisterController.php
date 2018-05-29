@@ -16,7 +16,7 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        return view('student.registration.register',
+        return view('dashboard.student.registration.register',
             ['counties' => SchoolLocations::get(['county', 'id'])]);
     }
 

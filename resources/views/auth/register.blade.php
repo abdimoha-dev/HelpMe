@@ -23,6 +23,10 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                {!! Form::label('role', 'Register As') !!}
+                                {!! Form::select('role', config('Sys.settings.users')) !!}
+                            </div>
 
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>

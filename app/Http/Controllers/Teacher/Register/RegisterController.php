@@ -13,7 +13,7 @@ class RegisterController extends Controller
 {
     public function registerForm()
     {
-        return view('teacher.register.register',
+        return view('dashboard.teacher.register.register',
             ['counties' => SchoolLocations::get(['county', 'id'])]);
     }
 

@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -23,6 +22,10 @@
                                     </span>
                                     @endif
                                 </div>
+                            </div>
+                            <div class="form-group row">
+                                {!! Form::label('role', 'Register As') !!}
+                                {!! Form::select('role', config('Sys.settings.users')) !!}
                             </div>
 
                             <div class="form-group row">

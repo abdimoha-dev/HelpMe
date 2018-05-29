@@ -27,3 +27,6 @@ mix.scripts([
 ], 'public/js/site.js');
 
 
+
+mix.styles(['resources/assets/css/bootstrap.min.css','',''], 'public/css/dash.css');
+mix.scripts(['', ''], 'public/js/dash.js');

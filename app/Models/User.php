@@ -16,6 +16,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'role',
         'email',
         'password',
         'email_token',
@@ -30,5 +31,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function teachers()
+    {
+        return $this->hasOne('App\Models\TeacherDetail', 'userId', 'id');
+    }
+
+    public function students()
+    {
+        return $this->hasOne('App\Models\Detail', 'userId', 'id');
+    }
 
 }

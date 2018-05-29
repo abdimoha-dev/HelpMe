@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('shared.alerts.alerts')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -14,7 +15,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                   @include('home')
                 </div>
             </div>
         </div>

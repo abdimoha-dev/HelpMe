@@ -51,6 +51,7 @@ class RegisterController extends Controller
 
         $user = User::create([
             'name'        => $Request->name,
+            'role'        => $Request->role,
             'email'       => $Request->email,
             'subject'     => $Request->subject,
             'school'      => $Request->school,
@@ -78,12 +79,6 @@ class RegisterController extends Controller
      * On clicking email confirmation link sent
      *
      */
-    public function clickemaillink($token)
-    {
-        if (User::where('email_token',$token)){
-            User::where('email_token',$token)->update(['email_token'=>NULL]);
-            return redirect('auth.login');
-        }
-    }
+
 
 }

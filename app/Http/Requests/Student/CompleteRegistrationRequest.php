@@ -35,7 +35,7 @@ class CompleteRegistrationRequest extends FormRequest
     {
         return [
             'county.required' => 'please select a county',
-            'school.required' => 'please enter your school',
+            'school.required' => 'please enter your school name',
             'admNo.required'  => 'please enter your admisition number',
             'form.required'   => 'please enter the form you are in',
 

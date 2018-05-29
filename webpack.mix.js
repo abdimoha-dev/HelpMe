@@ -29,4 +29,4 @@ mix.scripts([
 
 
 mix.styles(['resources/assets/css/bootstrap.min.css','',''], 'public/css/dash.css');
-mix.scripts(['', ''], 'public/js/dash.js')
+mix.scripts(['', ''], 'public/js/dash.js');

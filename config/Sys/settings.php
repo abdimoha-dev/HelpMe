@@ -6,10 +6,10 @@ return [
         'STUDENT' => 'Student',
     ],
     'form'  => [
-        'FORM ONE'   => 'form one',
-        'FORM TWO'   => 'form two',
-        'FORM THREE' => 'form three',
-        'FORM FOUR'  => 'form four',
+        'FORM ONE'   => 'Form One',
+        'FORM TWO'   => 'Form Two',
+        'FORM THREE' => 'Form Three',
+        'FORM FOUR'  => 'Form Four',
     ],
 
     'subjects' => [
@@ -22,6 +22,48 @@ return [
         'GEOGRAPHY'   => 'Geography',
         'AGRICULTURE' => 'Agriculture',
         'BUSINESS'    => 'Business',
+    ],
+        'topic' => [
+            'MATHEMATICS' => [
+                'Natural Numbers '                         => 'Natural Numbers',
+                'Factors'                                  => 'Factors',
+                'Divisibility Tests'                       => 'Divisibility Tests',
+                'Greatest Common Divisor(GCD)'             => 'Greatest Common Divisor(GCD)',
+                'Least Common Multiple(L . C . M)'         => 'Least Common Multiple(L . C . M)',
+                'Integers'                                 => 'Integers',
+                'Fractions'                                => 'Fractions',
+                'Decimals'                                 => 'Decimals',
+                'Squares and Square Roots'                 => 'Squares and Square Roots',
+                'Algebraic Expressions'                    => 'Algebraic Expressions',
+                'Rates, Ratio, Percentages and Proportion' => 'Rates, Ratio, Percentages and Proportion',
+                'Length'                                   => 'Length',
+                'Area'                                     => 'Area',
+                'Volume and Capacity'                      => 'Volume and Capacity',
+                'Mass, Density and Weight'                 => 'Mass, Density and Weight',
+                'Time'                                     => 'Time',
+                'Linear Equations'                         => 'Linear Equations',
+                'Commercial Arithmetic'                    => 'Commercial Arithmetic',
+                'Co-ordinates and Graphs'                  => 'Co-ordinates and Graphs',
+                'Angles and Plane Figures'                 => 'Angles and Plane Figures',
+                'Geometric Constructions'                  => 'Geometric Constructions',
+                'Scale Drawing'                            => 'Scale Drawing',
+                'Common Solids'                            => 'Common Solids',
+
+            ],
+            'ENGLISH'     => [
+                'Introduction to Biology'         => 'Introduction to Biology',
+                'Classification I'                => 'Classification I',
+                'The Cell'                        => 'The Cell',
+                'Cell Physiology'                 => 'Cell Physiology',
+                'Nutrition in Plants and Animals' => 'Nutrition in Plants and Animals',
+
+            ],
+        ],
+
+
+    'FORM TWO' => [
+
+
     ],
 
     'counties' => [

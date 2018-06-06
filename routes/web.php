@@ -21,7 +21,8 @@ Route::prefix('teacher')->group(function () {
 
     Route::prefix('uploads')->group(function () {
         Route::get('all', 'Teacher\Uploads\UploadsController@uploads');
-        Route::get('questions', 'Teacher\Uploads\QuestionsController@showClasses');
+        Route::get('questions', 'Teacher\Uploads\QuestionsController@showQuestionsForm');
+        Route::post('questions', 'Teacher\Uploads\QuestionsController@saveQuestions');
     });
 
 ##############################################
